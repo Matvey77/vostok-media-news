@@ -1,0 +1,17 @@
+{% if page_obj.has_other_pages %}
+    <div class="pegination">
+        <div class="nav-links">
+
+            {% for page in page_obj.paginator.page_range %}
+
+                {% if page_obj.number == page %}
+                    <span class="page-numbers current">{{ page }}</span>
+                {% elif page_obj.number == page|add:1 or page_obj.number == page|add:-1 %}
+                    <a class="page-numbers" href="?{{ search }}page={{ page }}">{{ page }}</a>
+                {% endif %}
+
+            {% endfor %}
+
+        </div>
+    </div>
+{% endif %}

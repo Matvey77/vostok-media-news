@@ -1,0 +1,10 @@
+venv/
+env/
+.idea/
+*.iml
+.DS_Store
+__pycache__/
+db.sqlite3
+media/
+django_cache/
+.env
